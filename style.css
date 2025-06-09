@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#c {
+  background: black;
+  background-size: cover;
+}
+
+.btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 5px;
+  left: 2%;
+  width: 120px;
+}
+
+.btn {
+  background: white;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  border: none;
+  user-select: none;
+  outline: none;
+  cursor: pointer;
+}
+
+
+#msg {
+  position: absolute;
+  background: transparent;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  font-family: sans-serif;
+  margin: 0 auto;
+}
+
+.btn-zoom {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 40px;
+  left: 10px;
+  height: 120px;
+  justify-content: space-between;
+}
+
+.quality-select {
+  position: fixed;
+  top: 20px;
+  right: 5px;
+}
+
+/* === MEDIA QUERIES FOR RESPONSIVENESS === */
+
+@media screen and (max-width: 768px) {
+  .btn {
+    width: 40px;
+    height: 40px;
+    font-size: 13px;
+  }
+
+  .btn-wrapper {
+    width: 100px;
+    left: 1%;
+    bottom: 10px;
+  }
+
+  .btn-zoom {
+    top: 60px;
+    left: 5px;
+    height: 100px;
+  }
+
+  #msg {
+    font-size: 16px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .quality-select {
+    top: 10px;
+    right: 10px;
+    font-size: 12px;
+  }
+
+  /* Speed slider panel adjustments */
+  div[style*="position: fixed"][style*="left: 20px"] {
+    width: 90%;
+    left: 5% !important;
+    font-size: 12px !important;
+  }
+
+  div[style*="position: fixed"][style*="left: 20px"] input[type="range"] {
+    width: 100%;
+  }
+
+  /* Tooltip size and font */
+  div[style*="position: fixed"][style*="pointer-events: none"] {
+    font-size: 12px !important;
+    padding: 2px 6px !important;
+  }
+
+  /* Pause/Resume button */
+  button.btn {
+    top: 10px !important;
+    right: 10px !important;
+   
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .btn {
+    width: 35px;
+    height: 35px;
+    font-size: 11px;
+  }
+
+  #msg {
+    font-size: 14px;
+  }
+
+  div[style*="position: fixed"][style*="left: 20px"] {
+    font-size: 11px !important;
+  }
+
+  div[style*="position: fixed"][style*="pointer-events: none"] {
+    font-size: 10px !important;
+  }
+}
